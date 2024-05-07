@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Course } from '../model/course';
 
 @Component({
   selector: 'app-list',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class ListComponent {
 
+  courses: Course[] = [
+    {_id: "1", name: "angular", category: "Front-end"},
+    {_id: "2", name: "spring", category: "Back-end"}
+  ];
+
+  displayedColumns = ['name', 'category'];
 }
